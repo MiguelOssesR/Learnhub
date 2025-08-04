@@ -1,0 +1,29 @@
+.primary{
+    background-color: #21AC6D;
+    color: #FFFFFF;
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    
+}
+
+.secondary{
+    background-color: blue;
+}
+
+.success{
+    
+}
+
+.danger{
+    
+}
+
+.warning{
+    
+}

@@ -1,0 +1,14 @@
+.sidebar {
+    width: 20%;
+    height: 100vh;
+}
+
+.sidebarContent {
+    margin: 20px;
+    padding: 10px;
+}
+
+.sidebar li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

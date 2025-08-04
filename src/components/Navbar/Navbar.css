@@ -1,0 +1,76 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    background-color: #F6F6F6;
+    height: 70px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.Logo {
+    display: flex;
+    align-items: center;
+}
+
+.UTSlogo {
+    height: 50px;
+    margin: 10px
+}
+
+.Learn {
+    color: #21AC6D;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Hub {
+    color: #15794E;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Buscador input {
+    border-radius: 10px;
+    border-width: 1px;
+    height: 20px;
+    width: 240px;
+    border-color: #AAAAAA;
+    margin: 10px
+
+}
+.Categorias {
+    margin: 10px;
+}
+
+.Categorias a {
+    margin: 5px;
+}
+
+.ContainerLogoCat {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.buscador {
+    position: relative;
+}
+
+.buscador img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+}
+
+.buscador input {
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding-left: 20px;
+    margin: 10px;
+}
