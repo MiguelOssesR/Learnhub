@@ -1,6 +1,15 @@
 .sidebar {
     width: 20%;
     height: 100vh;
+
+      position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px; /* Ajusta el tamaño de tu Sidebar */
+  overflow-y: auto;
+  z-index: 5;
+  padding-top: 60px; /* Asegúrate de que no se solape con el Navbar */
 }
 
 .sidebarContent {

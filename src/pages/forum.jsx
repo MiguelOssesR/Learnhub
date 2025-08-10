@@ -4,16 +4,18 @@ import Button from "../components/Button/Button"
 import '../styles/forum.css'
 import { useEffect, useState } from "react";
 import { db } from '../../firebaseConfig'
-import { collection, getDocs, addDoc, Timestamp } from 'firebase/firestore';
+import { collection, getDocs, addDoc, Timestamp, query, orderBy, limit, startAfter } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
 
 function Login() {
-  const [posts, setPosts] = useState([]); //Llama la cantidad de post almacenados en Firestore
-  const [showModal, setShowModal] = useState(false); //Visualizar el modal para crear un nuevo post
-  const [titulo, setTitulo] = useState(''); //Titulo para un nuevo post
-  const [contenido, setContenido] = useState(''); //Contenido para un nuevo post
-  const [categoria, setCategoria] = useState(''); //Categoría para un nuevo post
+  const [posts, setPosts] = useState([]);
+  const [lastVisible, setLastVisible] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [titulo, setTitulo] = useState('');
+  const [contenido, setContenido] = useState('');
+  const [categoria, setCategoria] = useState('');
 
-  //Crear y subir un nuevo post
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,7 +27,6 @@ function Login() {
         fecha_publicacion: Timestamp.now()
       });
 
-      //Limpiar el formulario despues de submido
       setTitulo('');
       setContenido('');
       setCategoria('');
@@ -40,22 +41,57 @@ function Login() {
 
   useEffect(() => {
     const fetchPosts = async () => {
+      setLoading(true);
       try {
-        const querySnapshot = await getDocs(collection(db, "posts"));
+        const q = query(
+          collection(db, "posts"),
+          orderBy("fecha_publicacion", "desc"),
+          limit(10)
+        );
+        const querySnapshot = await getDocs(q);
         const postsData = querySnapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data()
         }));
-        setPosts(postsData)
-        /*console.log("Post: ", postsData); Me sirve para ver los post en la consola del navegador*/
+
+        setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
+        setPosts(postsData);
       } catch (error) {
         console.error("Error al obtener los posts:", error);
+      } finally {
+        setLoading(false);
       }
-    }
+    };
+
     fetchPosts();
-  }, [])
+  }, []);
 
+  const loadMorePosts = async () => {
+    if (!lastVisible) return;
 
+    setLoading(true);
+    try {
+      const q = query(
+        collection(db, "posts"),
+        orderBy("fecha_publicacion", "desc"),
+        startAfter(lastVisible),
+        limit(10)
+      );
+
+      const querySnapshot = await getDocs(q);
+      const postsData = querySnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+
+      setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
+      setPosts(prevPosts => [...prevPosts, ...postsData]);
+    } catch (error) {
+      console.error("Error al cargar más posts:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="Forum">
@@ -64,8 +100,8 @@ function Login() {
         <Sidebar />
         <div className="Posts">
           <div className="headerPost">
-            <h1>Temas de discución</h1>
-            <Button type="newPostButton" text="Crear Discución" onClick={() => setShowModal(true)} />
+            <h1>Temas de discusión</h1>
+            <Button type="newPostButton" text="Crear Discusión" onClick={() => setShowModal(true)} />
           </div>
           {posts.map(post => (
             <div key={post.id} className="cardPost">
@@ -74,9 +110,11 @@ function Login() {
                 <p>#</p>
               </div>
               <div>
-                <p className="postTitulo">{post.titulo}</p>
+                <Link to={`/post/${post.id}`} className="postLink">
+                  <p className="postTitulo">{post.titulo}</p>
+                  <p>{post.contenido.slice(0, 100)}...</p>
+                </Link>
                 <p>Creado en {post.fecha_publicacion.toDate().toLocaleString()}</p>
-                <p className="postContenido">{post.contenido}</p>
                 <p>{post.categoria}</p>
               </div>
               <div>
@@ -84,6 +122,11 @@ function Login() {
               </div>
             </div>
           ))}
+          <div className="loadMoreButton">
+            <button onClick={loadMorePosts} disabled={loading}>
+              {loading ? "Cargando..." : "Cargar más"}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -103,7 +146,6 @@ function Login() {
           </div>
         </div>
       )}
-
     </div>
   );
 }

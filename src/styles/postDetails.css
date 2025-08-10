@@ -1,0 +1,4 @@
+.postDetailsContent {
+    display: flex;
+    flex-direction: row;
+}
