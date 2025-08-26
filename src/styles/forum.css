@@ -102,9 +102,7 @@
 
 
 
-
-
-
+/*Modal para hacer nuevo post*/
 .modalBackground {
     position: fixed;
     width: 100%;
@@ -117,32 +115,57 @@
 }
 
 .modalContent {
-    background: white;
-    padding: 40px;
+    background: rgb(255, 255, 255);
+    padding: 20px 30px;
     border-radius: 10px;
-    width: 600px;
-    max-width: 800px;
+    width: 500px;
+    max-width: 900px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
 }
 
-.modalContent input {
+/*---Generales---*/
+.modalContent input,
+.modalContent textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 6px;
+    font-size: 14px;
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    border-radius: 6px;
+    text-indent: 10px; 
+}
+
+/*---Especificos---*/
+.modalContent input {
+    padding: 10px 0px;
+    margin: 5px 0px;
 }
 
 .modalContent textarea {
-    background-color: #15794E;
-
+    height: 200px;
+    padding: 10px 0px;
 }
 
 .modalButtons {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 5px;
+    padding-top: 5px;
+}
+
+.primaryButton{
+    background-color: #21AC6D;
+    color: #FFFFFF;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 100px;
+    border: none;
+    transition: background-color 0.1s ease;
+}
+
+.primaryButton:hover {
+    background-color: #1C1B1F;
 }
