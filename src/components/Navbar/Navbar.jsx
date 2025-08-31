@@ -6,7 +6,7 @@ function Navbar() {
     <div className='Navbar'>
       <div className='ContainerLogoCat'>
       <div className='Logo'>
-        <img src='src/assets/uts_logo.svg' className='UTSlogo' />
+        <img src='https://firebasestorage.googleapis.com/v0/b/learnhub-d02e6.firebasestorage.app/o/uts_logo.svg?alt=media&token=80c460ec-25d2-464c-a8c0-5dbf34b3e427' className='UTSlogo' />
         <p className='Learn'>Learn</p>
         <p className='Hub'>Hub</p>
       </div>

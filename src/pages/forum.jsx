@@ -9,6 +9,8 @@ import {
   orderBy,
   limit,
   startAfter,
+  deleteDoc,
+  doc,
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import { categories } from "../utils/categories";
@@ -29,6 +31,20 @@ function Forum() {
   const [contenido, setContenido] = useState("");
   const [categoria, setCategoria] = useState("");
 
+  const deletePost = async (id) => {
+    try {
+      // Eliminamos el post de Firestore
+      const postRef = doc(db, "posts", id); // Referencia al documento con el id del post
+      await deleteDoc(postRef);
+
+      // Eliminamos el post del estado local para reflejar la eliminación en la UI
+      setPosts(posts.filter((post) => post.id !== id));
+    } catch (error) {
+      console.error("Error al eliminar el post:", error);
+      alert("Hubo un error al eliminar el post");
+    }
+  };
+
   // Función para manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +53,7 @@ function Forum() {
     if (loading) return;
 
     //Evitar que se seleccione una categoría que no está en la lista
-    if (!categorias.includes(categoria)) {
+    if (!categories.includes(categoria)) {
       alert("Por favor, seleccione una categoría valida");
       return;
     }
@@ -142,10 +158,25 @@ function Forum() {
                 <p>#</p>
               </div>
               <div>
-                <Link to={`/post/${post.id}`} className="postLink">
-                  <p className="postTitulo">{post.titulo}</p>
-                  <p>{post.contenido.slice(0, 100)}...</p>
-                </Link>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  {/* Título del post con enlace */}
+                  <Link to={`/post/${post.id}`} className="postLink">
+                    <p className="postTitulo">{post.titulo}</p>
+                  </Link>
+                  {/* Botón de eliminar */}
+                  <Button
+                    type="primaryButton"
+                    text="Eliminar"
+                    onClick={() => deletePost(post.id)}
+                  />
+                </div>
+                <p>{post.contenido.slice(0, 100)}...</p>
                 <p>
                   Creado en {post.fecha_publicacion.toDate().toLocaleString()}
                 </p>
