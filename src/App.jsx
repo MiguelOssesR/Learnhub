@@ -3,6 +3,7 @@ import Login from './pages/login';
 import Forum from './pages/forum';
 import PostDetail from './pages/postDetails'
 import NotFoundPage from './pages/notFoundPage';
+import CategoryPage from '../src/pages/categoryPage'
 import { createBrowserRouter } from 'react-router-dom';
 import { StrictMode } from 'react';
 
@@ -12,6 +13,9 @@ const router = createBrowserRouter([
   { path: "forum", element: <Forum /> },
   { path: "post/:id", element: <PostDetail /> },
   { path: "*", element: <NotFoundPage /> },
+  { path: "category/:categoryName", element: <CategoryPage /> },
+
+
 ])
 
 function App() {

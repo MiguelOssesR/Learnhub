@@ -12,8 +12,8 @@ function Navbar() {
       </div>
 
       <div className='Categorias'>
-        <Link to={'/login'}>Discuciones</Link>
-        <Link to={'/'}>Recursos</Link>
+        <Link to={'/forum'}>Discuciones</Link>
+        <Link to={'#'}>Recursos</Link>
       </div>
       </div>
       

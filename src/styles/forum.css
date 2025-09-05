@@ -9,9 +9,6 @@
 }
 
 .ForumContent {
-    display: flex;
-    flex-direction: row;
-
     margin-left: 250px;
     /* Deja espacio para el Sidebar */
     margin-top: 60px;
@@ -35,7 +32,7 @@
     display: flex;
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #606060;
     box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
 
@@ -97,6 +94,10 @@
     background-color: #1C1B1F;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 
 
