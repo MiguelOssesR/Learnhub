@@ -65,43 +65,41 @@ function CategoryPage() {
             <p>No hay posts en esta categoría.</p>
           ) : (
             <>
-              {posts.map((post) => (
-                <div key={post.id} className="cardPost">
-                  <div className="postLikes">
-                    <p>👍🏻</p>
-                    <p>#</p>
-                  </div>
-                  <div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
-                    >
-                      {/* Título del post con enlace */}
-                      <Link to={`/post/${post.id}`} className="postLink">
-                        <p className="postTitulo">{post.titulo}</p>
-                      </Link>
-                      {/* Botón de eliminar */}
-                      <Button
-                        type="primaryButton"
-                        text="Eliminar"
-                        onClick={() => deletePost(post.id)}
-                      />
-                    </div>
-                    <p>{post.contenido.slice(0, 100)}...</p>
-                    <p>
-                      Creado en{" "}
-                      {post.fecha_publicacion.toDate().toLocaleString()}
-                    </p>
-                    <p>{post.categoria}</p>
-                  </div>
-                  <div>
-                    <p className="postComentarios">🪧</p>
-                  </div>
+          {posts.map((post) => (
+            <div key={post.id} className="cardPost">
+              <div className="postData">
+                
+                {/* Likes */}
+                <div className="postLikes">
+                  <i class="bx  bx-like"></i>
+                  <p>0</p>
                 </div>
-              ))}
+
+                <div>
+                  {/* Título del post con enlace */}
+                  <Link to={`/post/${post.id}`} className="postLink">
+                    <p className="postTitulo">{post.titulo}</p>
+                  </Link>
+                  <p className="postContenido">
+                    {post.contenido.slice(0, 100)}...
+                  </p>
+                  <p>
+                    Creado en {post.fecha_publicacion.toDate().toLocaleString()}
+                  </p>
+                  <p>{post.categoria}</p>
+                </div>
+
+              </div>
+
+              {/* Cantidad de comentarios */}
+              <div>
+                <p className="postComentarios">
+                  <i class="bx  bx-message-detail"></i>{" "}
+                </p>
+              </div>
+
+            </div>
+          ))}
             </>
           )}
         </div>

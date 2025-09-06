@@ -1,8 +1,7 @@
 export const categories = [
-  "Algebra Booleana",
+  "Algebra_Booleana",
   "Algoritmos",
   "Arduino",
-  "C#",
   "C++",
   "CSS",
   "Docker",
@@ -19,7 +18,7 @@ export const categories = [
   "Python",
   "React",
   "Ruby",
-  "Spring Boot",
+  "Spring_Boot",
   "Swift",
   "TypeScript",
   "Unity",

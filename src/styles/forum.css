@@ -27,15 +27,15 @@
 }
 
 .cardPost {
-    background-color: #F6F6F6;
-    align-items: center;
     display: flex;
+    align-items: center;
     margin: 10px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: #606060;
-    box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
-
+    background-color: #F6F6F6;
+    box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);   
+    justify-content: space-between;
 }
 
 .postLikes {
@@ -51,15 +51,18 @@
 .postTitulo {
     font-size: 25px;
     font-weight: bold;
-    color: #1C1B1F;
+    color: #3d3d3d;
 }
 
 .postContenido {
     font-size: 20px;
+    width: 100vh;
 }
 
 .postComentarios {
-    font-size: 50px;
+    font-size: 40px;
+    color: #15794E;
+    padding-right: 10px;
 }
 
 .headerPost {
@@ -78,20 +81,19 @@
 }
 
 .newPostButton {
-    background-color: #15794E;
+    background-color: #21AC6D;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     padding: 10px;
     width: 200px;
     border: none;
-    transition: background-color 0.3s ease;
 
 }
 
 .newPostButton:hover {
-    background-color: #1C1B1F;
+    background-color: #15794E;
 }
 
 a {
@@ -155,18 +157,31 @@ a {
 }
 
 .primaryButton{
-    background-color: #21AC6D;
-    color: #FFFFFF;
-    width: 100px;
-    height: 30px;
-    text-align: center;
+    color: #15794E;
     font-weight: bold;
-    font-size: 14px;
-    border-radius: 100px;
+    font-size: 30px;
+    padding: 5px;
     border: none;
-    transition: background-color 0.1s ease;
 }
 
 .primaryButton:hover {
-    background-color: #1C1B1F;
+    background-color: #15794E;
+    color: white;
+    border-radius: 10px;
 }
+
+
+
+
+.postData {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+}
+
+.deleteComment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

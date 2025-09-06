@@ -22,20 +22,21 @@
 }
 
 .tagList :hover {
-    background-color: #21AC6D;
-    border-radius: 100px;
+    background-color: #15794E;
+    border-radius: 10px;
     color: white;
 }
 
 .link {
-  color: black;
+  color: #3d3d3d;
   text-decoration: none;
   padding: 5px 10px;
 }
 
 .link.active {
   color: white;
-  background-color: red;
-  border-radius: 6px;
+  background-color: #21AC6D;
+  border-radius: 10px;
   font-weight: bold;
 }
+
