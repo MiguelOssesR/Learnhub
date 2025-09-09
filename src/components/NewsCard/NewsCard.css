@@ -1,0 +1,33 @@
+.cardNewsPost {
+    display: flex;
+    margin: 10px;
+    color: #606060;
+    background-color: #F6F6F6;
+    border-radius: 30px;
+    box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    min-width: 300px;
+}
+
+.newsPost img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerNewsPost {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.containerNewsPostInformation{
+    padding: 10px 26px;
+    width: 100%;
+}
+
+.containerDescription {
+    padding: 10px 26px;
+    text-align: justify;
+}

@@ -80,21 +80,7 @@
     padding-bottom: 10px;
 }
 
-.newPostButton {
-    background-color: #21AC6D;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-    border: none;
 
-}
-
-.newPostButton:hover {
-    background-color: #15794E;
-}
 
 a {
   color: inherit;
@@ -155,23 +141,6 @@ a {
     gap: 5px;
     padding-top: 5px;
 }
-
-.primaryButton{
-    color: #15794E;
-    font-weight: bold;
-    font-size: 30px;
-    padding: 5px;
-    border: none;
-}
-
-.primaryButton:hover {
-    background-color: #15794E;
-    color: white;
-    border-radius: 10px;
-}
-
-
-
 
 .postData {
     display: flex;

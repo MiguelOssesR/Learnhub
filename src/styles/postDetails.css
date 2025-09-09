@@ -1,4 +1,31 @@
 .postDetailsContent {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 20px;
+    height: 90vh;
+}
+
+.cardPostDetails {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 40px 40px;
+    border-radius: 10px;
+    color: #606060;
+    background-color: #F6F6F6;
+    box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);   
+    gap: 20px;
+}
+
+.returnButton {
+    font-size: 50px;
+    color: #21AC6D;
+}
+
+.returnButton :hover{
+    color: #15794E;
+}
+
+.detailsPost{
+    font-size: 30px;
+    text-align: justify;
 }

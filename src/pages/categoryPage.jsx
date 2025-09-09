@@ -71,7 +71,7 @@ function CategoryPage() {
                 
                 {/* Likes */}
                 <div className="postLikes">
-                  <i class="bx  bx-like"></i>
+                  <i className="bx  bx-like"></i>
                   <p>0</p>
                 </div>
 
@@ -94,7 +94,7 @@ function CategoryPage() {
               {/* Cantidad de comentarios */}
               <div>
                 <p className="postComentarios">
-                  <i class="bx  bx-message-detail"></i>{" "}
+                  <i className="bx  bx-message-detail"></i>{" "}
                 </p>
               </div>
 

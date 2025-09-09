@@ -144,7 +144,7 @@ function Forum() {
           <div className="headerPost">
             <h1>Temas de discusión</h1>
             <Button
-              type="newPostButton"
+              type="primaryButton"
               text="Crear Discusión"
               onClick={() => setShowModal(true)}
             />
@@ -190,8 +190,8 @@ function Forum() {
           ))}
 
           {/* Botón para cargar más posts */}
-          <div className="loadMoreButton">
-            <button onClick={loadMorePosts} disabled={loading}>
+          <div>
+            <button className="primaryButton" onClick={loadMorePosts} disabled={loading}>
               {loading ? "Cargando..." : "Cargar más"}
             </button>
           </div>

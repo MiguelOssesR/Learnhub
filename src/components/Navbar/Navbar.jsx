@@ -2,9 +2,12 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const isNews = location.pathname === `/news`;
   const isForum = location.pathname === `/forum`;
   const isResources = location.pathname === `/resources`;
-  const isFeedback= location.pathname === `/feedback`;
+  const isTools = location.pathname === `/tools`;
+  const isFeedback = location.pathname === `/feedback`;
+
   return (
     <div className="Navbar">
       <div className="ContainerLogoCat">
@@ -19,6 +22,14 @@ function Navbar() {
 
         <div className="Categorias">
           <p>|</p>
+          <div className={`itemCategory ${isNews ? "active" : ""}`}>
+            <div className="item">
+              <i class="bx  bx-community boxIcons"></i>
+              <Link to={`/news`}>Noticias</Link>
+            </div>
+          </div>
+
+          <p>|</p>
           <div className={`itemCategory ${isForum ? "active" : ""}`}>
             <div className="item">
               <i class="bx  bx-discussion boxIcons"></i>
@@ -27,10 +38,18 @@ function Navbar() {
           </div>
 
           <p>|</p>
-           <div className={`itemCategory ${isResources ? "active" : ""}`}>
+          <div className={`itemCategory ${isResources ? "active" : ""}`}>
             <div className="item">
               <i class="bx  bx-folder-cog boxIcons"></i>
-              <Link to={"#"}>Recursos</Link>
+              <Link to={"resources"}>Recursos</Link>
+            </div>
+          </div>
+
+          <p>|</p>
+          <div className={`itemCategory ${isTools ? "active" : ""}`}>
+            <div className="item">
+              <i class='bx  bx-spanner boxIcons'  ></i>
+              <Link to={"tools"}>Herramientas</Link>
             </div>
           </div>
 
@@ -38,7 +57,7 @@ function Navbar() {
           <div className={`itemCategory ${isFeedback ? "active" : ""}`}>
             <div className="item">
               <i class="bx  bx-message-bubble-edit boxIcons"></i>
-              <Link to={"#"}>Sugerencias</Link>
+              <Link to={"suggestions"}>Sugerencias</Link>
             </div>
           </div>
 
