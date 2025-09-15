@@ -1,0 +1,75 @@
+.resourcesSelectedContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 95vw;
+  justify-self: center;
+}
+
+.resourceSelectedCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.resourceSelectedCardData{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 30px;
+  margin: 10px;
+  width: 90%;
+  height: 300px;
+}
+
+.resourceSelectedCardDataInformation{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 20px;
+}
+
+.resourceSelectedCardData img{
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.resourceSelectedCardData h1{
+  font-size: 2rem;
+  color: #333;
+}
+
+.resourceSelectedCardData p{
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.resourceSelectedCardDataButton{
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.primaryButtonResource {
+    background-color: #21AC6D;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    width: 20%;
+
+}
+
+.primaryButtonResource:hover {
+    background-color: #15794E;
+    cursor: pointer;
+}

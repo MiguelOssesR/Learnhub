@@ -10,6 +10,7 @@ import Suggestiones from '../src/pages/suggestions'
 
 import CategoryPage from '../src/pages/categoryPage'
 import PostDetail from './pages/postDetails'
+import ResourcesSelected from './pages/resourcesSelected';
 import NotFoundPage from './pages/notFoundPage';
 
 const router = createBrowserRouter([
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
   { path: "suggestions", element: <Suggestiones /> },
   
   { path: "category/:categoryName", element: <CategoryPage /> },
+  { path: "resources/:id", element: <ResourcesSelected /> },
   { path: "post/:id", element: <PostDetail /> },
   { path: "*", element: <NotFoundPage /> }
 ])

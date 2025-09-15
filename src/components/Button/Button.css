@@ -24,4 +24,5 @@
 
 .primaryButton:hover {
     background-color: #15794E;
+    cursor: pointer;
 }

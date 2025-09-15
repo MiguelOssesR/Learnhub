@@ -1,0 +1,23 @@
+.resourceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  transition: transform 0.2s;
+}
+
+.resourceCard:hover {
+  transform: translateY(-5px);
+}
+
+.resourceCard img {
+  width: 80%;
+  object-fit: cover;
+  border-radius: 8px;
+}
