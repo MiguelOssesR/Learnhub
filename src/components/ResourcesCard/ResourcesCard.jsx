@@ -5,7 +5,9 @@ function ResourcesCard({ title, image }) {
     <>
         <div className="resourceCard">
             <h2>{title}</h2>
-            <img src={image} alt={title} />
+            <div className="imageContainer">
+              <img src={image} alt={title} />
+            </div>
         </div>
     </>
   )

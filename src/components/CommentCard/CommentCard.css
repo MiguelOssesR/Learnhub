@@ -1,0 +1,36 @@
+.CommentCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardCommentContent{
+    display: flex;
+    color: #606060;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 150px;
+    margin: 20px 0px;
+    align-items: center;
+}
+
+.cardCommentImage{
+    background-color: #efffe5;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px
+}
+
+.cardCommentImage img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    object-fit: scale-down;
+}
