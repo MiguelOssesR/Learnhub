@@ -1,64 +1,55 @@
-.Navbar{
-    display: flex;
-    align-items: center;
-    background-color: #F6F6F6;
-    height: 70px;
-    width: 100%;
-    justify-content: space-between;
-
-      position: fixed;
-     top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+.Navbar {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  height: 70px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .Logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .UTSlogo {
-    height: 50px;
-    margin: 10px
+  height: 50px;
+  margin: 10px;
+  padding-right: 10px;
 }
 
 .Learn {
-    color: #21AC6D;
-    font-size: 30px;
-    font-weight: bold;
+  color: #21ac6d;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .Hub {
-    color: #15794E;
-    font-size: 30px;
-    font-weight: bold;
+  color: #15794e;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.Buscador input {
-    border-radius: 10px;
-    border-width: 1px;
-    height: 20px;
-    width: 240px;
-    border-color: #AAAAAA;
-    margin: 10px
-
-}
 .Categorias {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
 }
 
 .Categorias p {
-    font-size: 50px;
-    font-weight: lighter;
-    color: #dddddd;
+  font-size: 50px;
+  font-weight: lighter;
+  color: #dddddd;
 }
 
 .ContainerLogoCat {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .itemCategory {
@@ -68,59 +59,58 @@
   color: #3d3d3d;
 }
 
-
-.item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 150px;
-    height: 50px;
-    gap: 5px;
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  gap: 5px;
 }
 
-.item:hover{
-    background-color: #15794E;
-    color: white;
-    border-radius:10px
+.item:hover {
+  background-color: #15794e;
+  color: white;
+  border-radius: 10px;
 }
 
 .buscador {
-    position: relative;
+  position: relative;
 }
 
 .buscador img {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
 }
 
 .buscador input {
-    height: 30px;
-    width: 200px;
-    border-radius: 10px;
-    border-width: 1px;
-    padding-left: 20px;
-    margin: 10px;
+  height: 30px;
+  width: 200px;
+  border-radius: 10px;
+  border-width: 1px;
+  padding-left: 20px;
+  margin: 10px;
 }
 
 .boxIcons {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .navBarItem {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .itemCategory.active {
-    background-color: #21AC6D;
-    color: white;
-    border-radius:10px
+  background-color: #21ac6d;
+  color: white;
+  border-radius: 10px;
 }
 
 .itemCategory.active :hover {
-    background-color: #21AC6D;
+  background-color: #21ac6d;
 }

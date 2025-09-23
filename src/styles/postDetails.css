@@ -29,3 +29,40 @@
     font-size: 30px;
     text-align: justify;
 }
+
+.commentsSection{
+    margin-top: 20px;
+}
+
+.inputSesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formComment{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+}
+
+.formComment textarea{
+    box-sizing: border-box;
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 20px;
+    border: 1px solid #CCCCCC;
+    resize: none;
+    background-color: #F6F6F6;
+}
+
+.formComment .primary{
+    align-self: flex-end;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 10%;
+    font-size: 16px;
+}

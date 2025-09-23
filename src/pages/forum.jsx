@@ -65,6 +65,7 @@ function Forum() {
         contenido,
         categoria,
         fecha_publicacion: Timestamp.now(),
+        commentCount: 0 
       });
 
       setTitulo("");
@@ -156,8 +157,8 @@ function Forum() {
               <div className="postData">
                 {/* Likes */}
                 <div className="postLikes">
-                  <i class="bx  bx-like"></i>
-                  <p>0</p>
+                  <i class="bx  bx-message-detail"></i>
+                  <p>{post.commentCount}</p>
                 </div>
 
                 <div>
@@ -182,9 +183,6 @@ function Forum() {
                   text={<i class='bx  bx-trash-x'  ></i>}
                   onClick={() => deletePost(post.id)}
                 />
-                <p className="postComentarios">
-                  <i class="bx  bx-message-detail"></i>{" "}
-                </p>
               </div>
             </div>
           ))}

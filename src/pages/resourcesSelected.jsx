@@ -72,7 +72,6 @@ function ResourcesSelected() {
       <Navbar />
       <div className="resourcesSelectedContent">
         <div className="resourceSelectedCard">
-          
         <form className="resourceForm" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -122,6 +121,7 @@ function ResourcesSelected() {
                       onClick={() => handleDelete(resource.id)}
                     />
                     <Button
+                    
                       type="primaryButtonResource"
                       text="Acceder al recurso"
                       onClick={() => window.open(resource.link, "_blank")}
