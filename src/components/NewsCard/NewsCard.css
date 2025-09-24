@@ -6,11 +6,11 @@
     border-radius: 30px;
     box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
     width: 80%;
-    min-width: 300px;
+    min-width: 340px;
 }
 
 .newsPost img {
-    height: 400px;
+    height: clamp(200px, 30vw, 400px);
     width: 100%;
     object-fit: cover;
 }
@@ -23,11 +23,17 @@
 }
 
 .containerNewsPostInformation{
+    box-sizing: border-box;
     padding: 10px 26px;
     width: 100%;
+}
+
+.containerNewsPostInformation h1{
+    font-size: clamp(1.25rem, 1.36vi + 0.91rem, 2rem);
 }
 
 .containerDescription {
     padding: 10px 26px;
     text-align: justify;
+    font-size: (1.25rem, 4.09vi + 0.23rem, 3.5rem);
 }

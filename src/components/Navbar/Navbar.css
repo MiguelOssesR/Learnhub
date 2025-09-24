@@ -8,7 +8,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; /* Asegúrate de que esté por encima de otros elementos */
+  z-index: 10;
 }
 
 .Logo {
@@ -33,12 +33,12 @@
   color: #15794e;
   font-size: 30px;
   font-weight: bold;
+  padding-right: 20px;
 }
 
 .Categorias {
   display: flex;
   flex-direction: row;
-  padding-left: 20px;
 }
 
 .Categorias p {
@@ -113,4 +113,37 @@
 
 .itemCategory.active :hover {
   background-color: #21ac6d;
+}
+
+@media (max-width: 1060px){
+  .Learn {
+    display: none;
+  }
+
+  .Hub {
+    display: none;
+  }
+
+  .UTSlogo {
+    display: none;
+  }
+  
+  .Navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Logo {
+    display: none;
+  }
+}
+
+@media (max-width: 840px){
+  .tabTag {
+    display: none;
+  }
+
+  .item{
+    width: 16vw;
+  }
 }

@@ -23,7 +23,7 @@ function Navbar() {
             <Link to={`/news`}>
               <div className="item">
                 <i class="bx  bx-community boxIcons"></i>
-                Noticias
+                <div className="tabTag">Noticias</div>
               </div>
             </Link>
           </div>
@@ -33,7 +33,7 @@ function Navbar() {
             <Link to={`/forum`}>
               <div className="item">
                 <i class="bx  bx-discussion boxIcons"></i>
-                Discuciones
+                <div className="tabTag">Discuciones</div>
               </div>
             </Link>
           </div>
@@ -43,7 +43,7 @@ function Navbar() {
             <Link to={"/resources"}>
               <div className="item">
                 <i class="bx  bx-folder-cog boxIcons"></i>
-                Recursos
+                <div className="tabTag">Recursos</div>
               </div>
             </Link>
           </div>
@@ -53,7 +53,7 @@ function Navbar() {
             <Link to={"/tools"}>
               <div className="item">
                 <i class="bx  bx-spanner boxIcons"></i>
-                Herramientas
+                <div className="tabTag">Herramientas</div>
               </div>
             </Link>
           </div>
@@ -63,11 +63,10 @@ function Navbar() {
             <Link to={"/suggestions"}>
               <div className="item">
                 <i class="bx  bx-message-bubble-edit boxIcons"></i>
-                Sugerencias
+                <div className="tabTag">Sugerencias</div>
               </div>
             </Link>
           </div>
-
           <p>|</p>
         </div>
       </div>
