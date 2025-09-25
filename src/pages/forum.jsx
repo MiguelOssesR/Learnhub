@@ -65,7 +65,7 @@ function Forum() {
         contenido,
         categoria,
         fecha_publicacion: Timestamp.now(),
-        commentCount: 0 
+        commentCount: 0,
       });
 
       setTitulo("");
@@ -144,11 +144,20 @@ function Forum() {
         <div className="Posts">
           <div className="headerPost">
             <h1>Temas de discusión</h1>
-            <Button
-              type="primaryButton"
-              text="Crear Discusión"
-              onClick={() => setShowModal(true)}
-            />
+            <div className="ButtonControlTypeMobile">
+              <Button
+                type="primaryButton"
+                text={<i class='bx  bx-pencil'  ></i> }
+                onClick={() => setShowModal(true)}
+              />
+            </div>
+            <div className="ButtonControlTypeDesktop">
+              <Button
+                type="primaryButton"
+                text="Crear Discusión"
+                onClick={() => setShowModal(true)}
+              />
+            </div>
           </div>
 
           {/* Muestra los posts */}
@@ -161,13 +170,13 @@ function Forum() {
                   <p>{post.commentCount}</p>
                 </div>
 
-                <div>
+                <div className="dataSpace">
                   {/* Título del post con enlace */}
                   <Link to={`/post/${post.id}`} className="postLink">
                     <p className="postTitulo">{post.titulo}</p>
                   </Link>
                   <p className="postContenido">
-                    {post.contenido.slice(0, 100)}...
+                    {post.contenido.slice(0, 80)}...
                   </p>
                   <p>
                     Creado en {post.fecha_publicacion.toDate().toLocaleString()}
@@ -176,11 +185,11 @@ function Forum() {
                 </div>
               </div>
 
-              {/* Cantidad de comentarios y botón eliminar*/}
+              {/* Botón eliminar*/}
               <div className="deleteComment">
                 <Button
                   type="primaryButton"
-                  text={<i class='bx  bx-trash-x'  ></i>}
+                  text={<i class="bx  bx-trash-x"></i>}
                   onClick={() => deletePost(post.id)}
                 />
               </div>
@@ -189,7 +198,11 @@ function Forum() {
 
           {/* Botón para cargar más posts */}
           <div>
-            <button className="primaryButton" onClick={loadMorePosts} disabled={loading}>
+            <button
+              className="primaryButton"
+              onClick={loadMorePosts}
+              disabled={loading}
+            >
               {loading ? "Cargando..." : "Cargar más"}
             </button>
           </div>

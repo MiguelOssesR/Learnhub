@@ -16,11 +16,17 @@
     padding: 20px;
 }
 
+.dataSpace{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+}
+
 .Posts {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 20px;
     max-height: 80vh;
     /* Ajusta la altura según el espacio disponible */
     overflow-y: scroll;
@@ -49,14 +55,20 @@
 }
 
 .postTitulo {
-    font-size: 25px;
+    width: 50vw;   
+      overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+    font-size: clamp(1.25rem, 1.36vi + 0.91rem, 2rem);
     font-weight: bold;
     color: #3d3d3d;
 }
 
 .postContenido {
-    font-size: 20px;
-    width: 100vh;
+  width: 50vw;     
+  overflow: hidden;
+  white-space: nowrap; 
+  text-overflow: ellipsis;
 }
 
 .postComentarios {
@@ -78,6 +90,10 @@
     z-index: 10;
     /* Aseguramos que esté encima de los posts */
     padding-bottom: 10px;
+}
+
+.headerPost h1{
+    font-size: clamp(1.25rem, 1.36vi + 0.91rem, 2rem);
 }
 
 
@@ -152,5 +168,27 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
+    
+}
+
+.ButtonControlTypeMobile{
+    display: none;
+}
+
+
+@media (max-width: 840px){
+  .ForumContent {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 390px){
+    .ButtonControlTypeMobile{
+        display: block;
+    }
+    .ButtonControlTypeDesktop{
+        display: none;
+    }
 }
 

@@ -4,13 +4,3 @@ body{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
 }
-
-.Forum {
-   display: flex; 
-   flex-direction: column;
-}
-
-.ForumContent {
-    display: flex;
-    flex-direction: row;
-}
