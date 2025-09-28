@@ -8,19 +8,30 @@
 }
 
 .suggestionsContainer img {
-    max-width: 50%;
-    height: auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
 }
 
 .suggestionsContainer .primary {
-    width: 200px;
+    width: 300px;
     height: 50px;
-    border-radius: 10px;
-    font-size: 16px;
+    border-radius: 10px;;
+    font-size: 20px;
 }
 
 .suggestionsContainer .primary:hover {
     background-color: #000000;
     cursor: pointer;
+}
+
+textarea {
+    width: 80%;
+    max-width: 700px;
+    height: 80px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    font-size: 14px;
 }
 

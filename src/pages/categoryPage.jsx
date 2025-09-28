@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar/Sidebar";
 import Navbar from "../components/Navbar/Navbar";
-import Button from "../components/Button/Button";
 
 import "../styles/categoryPage.css";
 
@@ -65,41 +64,32 @@ function CategoryPage() {
             <p>No hay posts en esta categoría.</p>
           ) : (
             <>
-          {posts.map((post) => (
-            <div key={post.id} className="cardPost">
-              <div className="postData">
-                
-                {/* Likes */}
-                <div className="postLikes">
-                  <i className="bx  bx-like"></i>
-                  <p>0</p>
+              {posts.map((post) => (
+                <div key={post.id} className="cardPost">
+                  <div className="postData">
+                    {/* Likes */}
+                    <div className="postLikes">
+                      <i class="bx  bx-message-detail"></i>
+                      <p>{post.commentCount}</p>
+                    </div>
+
+                    <div>
+                      {/* Título del post con enlace */}
+                      <Link to={`/post/${post.id}`} className="postLink">
+                        <p className="postTitulo">{post.titulo}</p>
+                      </Link>
+                      <p className="postContenido">
+                        {post.contenido.slice(0, 100)}...
+                      </p>
+                      <p>
+                        Creado en{" "}
+                        {post.fecha_publicacion.toDate().toLocaleString()}
+                      </p>
+                      <p>{post.categoria}</p>
+                    </div>
+                  </div>
                 </div>
-
-                <div>
-                  {/* Título del post con enlace */}
-                  <Link to={`/post/${post.id}`} className="postLink">
-                    <p className="postTitulo">{post.titulo}</p>
-                  </Link>
-                  <p className="postContenido">
-                    {post.contenido.slice(0, 100)}...
-                  </p>
-                  <p>
-                    Creado en {post.fecha_publicacion.toDate().toLocaleString()}
-                  </p>
-                  <p>{post.categoria}</p>
-                </div>
-
-              </div>
-
-              {/* Cantidad de comentarios */}
-              <div>
-                <p className="postComentarios">
-                  <i className="bx  bx-message-detail"></i>{" "}
-                </p>
-              </div>
-
-            </div>
-          ))}
+              ))}
             </>
           )}
         </div>

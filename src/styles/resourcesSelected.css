@@ -6,7 +6,7 @@
   justify-self: center;
 }
 
-.resourceSelectedCard{
+.resourceSelectedCard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,62 +14,106 @@
   margin-top: 80px;
 }
 
-.resourceSelectedCardData{
+.resourceSelectedCardData {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
   background-color: #f6f6f6;
   box-shadow: 8.5px 7.5px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
   border-radius: 30px;
   margin: 10px;
   width: 90%;
-  height: 300px;
+  height: 100%;
 }
 
-.resourceSelectedCardDataInformation{
+.resourceSelectedCardDataInformation {
   display: flex;
+  width: 60%;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 40px;
   gap: 20px;
+  text-align: justify;
 }
 
-.resourceSelectedCardData img{
-  width: 500px;
+.resourceSelectedCardDataImage {
+  width: 400px;
+}
+
+.resourceSelectedCardDataImage img {
+  display: block;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 500px;
   height: 300px;
-  border-radius: 20px;
+  object-fit: cover;
 }
 
-.resourceSelectedCardData h1{
-  font-size: 2rem;
+.resourceSelectedCardData h1 {
+  font-size: clamp(1.25rem, 1.36vi + 0.91rem, 2rem);
   color: #333;
 }
 
-.resourceSelectedCardData p{
+.resourceSelectedCardData p {
   font-size: 1.1rem;
   color: #666;
 }
 
-.resourceSelectedCardDataButton{
+.resourceSelectedCardDataButton {
   display: flex;
   width: 100%;
   justify-content: flex-end;
 }
 
 .primaryButtonResource {
-    background-color: #21AC6D;
-    color: white;
-    font-size: 18px;
-    border-radius: 10px;
-    padding: 10px;
-    border: none;
-    width: 20%;
-
+  background-color: #21ac6d;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  width: 20%;
 }
 
 .primaryButtonResource:hover {
-    background-color: #15794E;
-    cursor: pointer;
+  background-color: #15794e;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+  .resourceSelectedCardData {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .resourceSelectedCardDataImage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .resourceSelectedCardDataImage img {
+    width: 50vw;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .resourceSelectedCardDataInformation {
+    display: flex;
+    width: 90%;
+  }
+
+  .primaryButtonResource {
+    width: 50%;
+  }
+
+  .resourceSelectedCardDataButton{
+    justify-content: center;
+  }
 }

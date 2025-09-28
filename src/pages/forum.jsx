@@ -147,7 +147,7 @@ function Forum() {
             <div className="ButtonControlTypeMobile">
               <Button
                 type="primaryButton"
-                text={<i class='bx  bx-pencil'  ></i> }
+                text={<i class="bx  bx-pencil"></i>}
                 onClick={() => setShowModal(true)}
               />
             </div>
@@ -228,17 +228,20 @@ function Forum() {
                 onChange={(e) => setContenido(e.target.value)}
                 required
               ></textarea>
-              <input
-                list="categoria"
-                placeholder="Categoría"
+
+              <select
+                value={categoria}
                 onChange={(e) => setCategoria(e.target.value)}
                 required
-              />
-              <datalist id="categoria">
+              >
+                <option value="">Categoría</option>
                 {categories.map((cat, index) => (
-                  <option key={index} value={cat} />
+                  <option key={index} value={cat}>
+                    {cat}
+                  </option>
                 ))}
-              </datalist>
+              </select>
+
               <div className="modalButtons">
                 <button
                   className="primaryButton"

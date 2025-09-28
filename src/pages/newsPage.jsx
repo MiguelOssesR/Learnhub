@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
 import { db } from "../../firebaseConfig";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, limit } from "firebase/firestore";
 
 import Navbar from "../components/Navbar/Navbar";
 import NewsCard from "../components/NewsCard/NewsCard";
 
 import "../styles/newsPage.css";
 
-function newsPage() {
+function NewsPage() {
   const [news, setNews] = useState([]);
 
   // Funcion para obtener Noticias
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const q = query(collection(db, "news"));
+        const q = query(
+          collection(db, "news"),
+          orderBy("fecha", "desc"),
+          limit(10));
         const querySnapshot = await getDocs(q);
         const newsData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
@@ -47,4 +50,4 @@ function newsPage() {
   );
 }
 
-export default newsPage;
+export default NewsPage;

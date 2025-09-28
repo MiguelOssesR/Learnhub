@@ -132,7 +132,8 @@ a {
 
 /*---Generales---*/
 .modalContent input,
-.modalContent textarea {
+.modalContent textarea,
+.modalContent select {
     width: 100%;
     font-size: 14px;
     border: 1px solid #ccc;
