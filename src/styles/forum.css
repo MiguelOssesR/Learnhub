@@ -17,9 +17,6 @@
 }
 
 .dataSpace{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: clip;
 
 }
 
@@ -27,9 +24,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    max-height: 80vh;
+    max-height: 100vh;
     /* Ajusta la altura según el espacio disponible */
-    overflow-y: scroll;
 }
 
 .cardPost {
@@ -82,13 +78,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    /* Se quedará en la parte superior cuando hagas scroll */
     background-color: white;
-    /* Fondo blanco para evitar que se solape con los posts */
-    z-index: 10;
-    /* Aseguramos que esté encima de los posts */
     padding-bottom: 10px;
 }
 
@@ -139,6 +129,11 @@ a {
     border: 1px solid #ccc;
     border-radius: 6px;
     text-indent: 10px; 
+}
+
+select{
+    background-color: #fff;
+    height: 30px;
 }
 
 /*---Especificos---*/

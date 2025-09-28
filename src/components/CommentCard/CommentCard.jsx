@@ -1,6 +1,6 @@
 import "./CommentCard.css";
 
-function CommentCard({ comment, imageUrl, fecha }) {
+function CommentCard({ comment, imageUrl, fecha, onClick }) {
   return (
     <div className="CommentCard">
       <div className="cardCommentContent">
@@ -8,7 +8,12 @@ function CommentCard({ comment, imageUrl, fecha }) {
           <img src={imageUrl} alt="Avatar" />
         </div>
         <div className="cardCommentData">
-          <p>{fecha}</p>
+          <div className="dateRepot">
+            <p>{fecha}</p>
+            <button onClick={onClick}>
+              <i class="bx  bx-block"></i>
+            </button>
+          </div>
           <p>{comment}</p>
         </div>
       </div>

@@ -25,7 +25,8 @@
     cursor: pointer;
 }
 
-textarea {
+
+.textAreaSuggestions {
     width: 80%;
     max-width: 700px;
     height: 80px;

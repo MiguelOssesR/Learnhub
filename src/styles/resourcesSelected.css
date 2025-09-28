@@ -35,8 +35,8 @@
   align-items: flex-start;
   padding: 40px;
   gap: 20px;
-  text-align: justify;
 }
+
 
 .resourceSelectedCardDataImage {
   width: 400px;
