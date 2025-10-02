@@ -9,7 +9,7 @@ function suggestions() {
       <Navbar />
       <div className="suggestionsContainer">
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/learnhub-d02e6.firebasestorage.app/o/Opinion.jpg?alt=media&token=50ceba88-75a2-4f24-9f21-9a67526626b0"
+          src="https://firebasestorage.googleapis.com/v0/b/learnhub-d02e6.firebasestorage.app/o/Opinion.jpg?alt=media&token=76fc4fae-6d4d-47ab-a7ae-efaa06fd8448"
           alt="Danos tu opinion"
         />
         <textarea className="textAreaSuggestions" name="suggestion" placeholder="Escribe aquí tus sugerencias."></textarea>

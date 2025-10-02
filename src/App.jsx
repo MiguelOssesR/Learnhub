@@ -13,6 +13,8 @@ import PostDetail from './pages/postDetails'
 import ResourcesSelected from './pages/resourcesSelected';
 import NotFoundPage from './pages/notFoundPage';
 
+import AddNew from './pages/addNew';
+
 const router = createBrowserRouter([
   { path: "/", element: <Navigate to="/news" /> },
   { path: "news", element: <News /> },
@@ -24,7 +26,10 @@ const router = createBrowserRouter([
   { path: "category/:categoryName", element: <CategoryPage /> },
   { path: "resources/:id", element: <ResourcesSelected /> },
   { path: "post/:id", element: <PostDetail /> },
-  { path: "*", element: <NotFoundPage /> }
+  { path: "*", element: <NotFoundPage /> },
+
+  //Secret Routes
+  { path: "addNew", element: <AddNew /> },
 ])
 
 function App() {
